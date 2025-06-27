@@ -83,16 +83,6 @@ const config = {
         enableInDevelopment: false, // optional
       },
     ],
-    // Add sitemap plugin
-    [
-      '@docusaurus/plugin-sitemap',
-      {
-        changefreq: 'weekly',
-        priority: 0.5,
-        ignorePatterns: ['/tags/**'],
-        filename: 'sitemap.xml',
-      },
-    ],
   ],
 
   presets: [
