@@ -79,7 +79,7 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      image: 'img/logo.svg',
+      image: 'img/nowa_icon.png',
 
       // Replace with your project's social card
       colorMode: {
