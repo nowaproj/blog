@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://blog.nowa.dev/sitemap.xml
+
+# Prevent crawling of search results
+Disallow: /search
+
+# Allow crawling of all blog content
+Allow: /blog/
+Allow: /tags/ 

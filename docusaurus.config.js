@@ -7,21 +7,23 @@ const { themes } = require('prism-react-renderer');
 const lightCodeTheme = themes.github;
 const darkCodeTheme = themes.dracula;
 
-
+// ===== SINGLE SOURCE OF TRUTH FOR BLOG SEO =====
+const BLOG_TITLE = 'Nowa Official Blog';
+const BLOG_DESCRIPTION = 'We write content that helps you build great Flutter apps and achieve success with Nowa';
+const SITE_URL = 'https://blog.nowa.dev';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Nowa Blog',
-  tagline: 'Updates and articles from Nowa',
+  title: BLOG_TITLE,
+  tagline: BLOG_DESCRIPTION,
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://blog.nowa.dev/',
+  url: SITE_URL,
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
   trailingSlash: false,
-
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -40,6 +42,38 @@ const config = {
     locales: ['en'],
   },
 
+  // Essential SEO meta tags only
+  headTags: [
+    {
+      tagName: 'meta',
+      attributes: {
+        name: 'keywords',
+        content: 'Flutter app builder, AI app development, Visual Flutter builder, Low-code Flutter, AI visual builder, vibecoding tool, mobile app development',
+      },
+    },
+    {
+      tagName: 'meta',
+      attributes: {
+        property: 'og:type',
+        content: 'website',
+      },
+    },
+    {
+      tagName: 'meta',
+      attributes: {
+        name: 'twitter:card',
+        content: 'summary_large_image',
+      },
+    },
+    {
+      tagName: 'meta',
+      attributes: {
+        name: 'twitter:site',
+        content: '@nowa_dev',
+      },
+    },
+  ],
+
   plugins: [
     [
       "posthog-docusaurus",
@@ -47,6 +81,16 @@ const config = {
         apiKey: "phc_t9ByiL3PTqP8dTa6nWoqjoygz7nIuKOjLPXig1rxm6C",
         appUrl: "https://us.i.posthog.com", // optional, defaults to "https://us.i.posthog.com"
         enableInDevelopment: false, // optional
+      },
+    ],
+    // Add sitemap plugin
+    [
+      '@docusaurus/plugin-sitemap',
+      {
+        changefreq: 'weekly',
+        priority: 0.5,
+        ignorePatterns: ['/tags/**'],
+        filename: 'sitemap.xml',
       },
     ],
   ],
@@ -57,20 +101,28 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: false,
-        blog:{
-        routeBasePath: '/',          // blog available at /
-        // optional extras
-        showReadingTime: true,
-        blogTitle: 'Nowa Blog',
-        blogDescription: 'Updates and articles from Nowa',
-      },
+        blog: {
+          routeBasePath: '/',          // blog available at /
+          // optional extras
+          showReadingTime: true,
+          blogTitle: BLOG_TITLE,
+          blogDescription: BLOG_DESCRIPTION,
+          feedOptions: {
+            type: 'all',
+            title: BLOG_TITLE,
+            description: BLOG_DESCRIPTION,
+            copyright: `Copyright © ${new Date().getFullYear()} Nowa.`,
+            language: 'en',
+          },
+          // SEO improvements for blog
+          onInlineAuthors: 'ignore', // This will suppress the author warnings you saw
+        },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
         gtag: {
           trackingID: 'G-CMNS133C82',
           anonymizeIP: false,
-
         },
       }),
     ],
@@ -127,7 +179,7 @@ const config = {
       },
   
       navbar: {
-        title: 'Nowa Blog',
+        title: BLOG_TITLE,
         logo: {
           alt: 'Nowa',
           src: 'img/logo.svg',

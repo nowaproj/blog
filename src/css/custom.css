@@ -160,6 +160,37 @@ main article {
   padding: 2rem 1rem;
 }
 
+/* Improve TOC layout without horizontal scroll */
+.theme-doc-toc-desktop {
+  flex: 0 0 300px;
+  max-width: 300px;
+  margin-left: 1.5rem;
+}
+
+.table-of-contents {
+  background: var(--ifm-background-surface-color);
+  border-radius: 0.5rem;
+  padding: 1.5rem !important;
+  margin-bottom: 2rem;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Ensure proper flex layout for main content area */
+.theme-doc-sidebar-container {
+  display: flex;
+  flex: 1;
+  max-width: 100%;
+}
+
+/* Make the main content area flexible */
+.theme-doc-markdown {
+  flex: 1;
+  min-width: 0;
+  max-width: none;
+}
+
 /* Blog post header */
 .container .margin-bottom--xl header {
   text-align: center;
@@ -175,10 +206,7 @@ main article {
   line-height: 1.2;
   margin-bottom: 1rem;
   color: var(--ifm-font-color-base);
-  background: linear-gradient(135deg, var(--ifm-color-primary) 0%, var(--ifm-color-primary-lighter) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  opacity: 0.9;
 }
 
 /* Article content improvements */
@@ -193,9 +221,6 @@ main article {
   margin-top: 3rem;
   margin-bottom: 1rem;
   color: var(--ifm-font-color-base);
-  border-bottom: 2px solid var(--ifm-color-primary);
-  padding-bottom: 0.5rem;
-  display: inline-block;
 }
 
 .markdown h3 {
@@ -336,6 +361,19 @@ code:not([class*="language-"]) {
   
   main article {
     padding: 1rem;
+  }
+  
+  /* Hide TOC on smaller screens or make it collapsible */
+  .theme-doc-toc-desktop {
+    display: none;
+  }
+  
+  .theme-doc-sidebar-container {
+    flex-direction: column;
+  }
+  
+  .theme-doc-markdown {
+    max-width: 100%;
   }
 }
 
