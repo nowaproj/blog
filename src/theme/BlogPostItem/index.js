@@ -47,8 +47,8 @@ export default function BlogPostItem(props) {
     structuredData.timeRequired = `PT${Math.ceil(metadata.readingTime)}M`;
   }
 
-  // Show comments by default, unless explicitly disabled in frontmatter
-  const shouldShowComments = metadata.frontMatter?.hide_comments !== true;
+  // Show comments by default, unless explicitly disabled with enable_comments: false
+  const shouldShowComments = metadata.frontMatter?.enable_comments !== false;
 
   return (
     <>

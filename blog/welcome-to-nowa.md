@@ -7,7 +7,7 @@ date: 2025-06-27
 tags: [general]
 keywords: [flutter, Nowa learning]
 image: https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&h=630&fit=crop
-enable_comments: true 
+enable_comments: true
 hide_table_of_contents: true
 ---
 
