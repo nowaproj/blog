@@ -10988,11 +10988,6 @@ postcss@^7.0.0, postcss@^7.0.1, postcss@^7.0.23, postcss@^7.0.27, postcss@^7.0.3
     picocolors "^0.2.1"
     source-map "^0.6.1"
 
-posthog-docusaurus@^2.0.2:
-  version "2.0.2"
-  resolved "https://registry.npmjs.org/posthog-docusaurus/-/posthog-docusaurus-2.0.2.tgz"
-  integrity sha512-RUxVzJqZ214JuEr1msngxXgTYlK+q37Vhhvp4yG07K+UFF12HBU1TrOdl/MEmvHQimsFQNEa68eYasJo2kAsJA==
-
 prepend-http@^1.0.1:
   version "1.0.4"
   resolved "https://registry.npmjs.org/prepend-http/-/prepend-http-1.0.4.tgz"
