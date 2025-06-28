@@ -3,8 +3,11 @@ title: Welcome to the Official Nowa Blog
 description: Welcome to the official Nowa blog - your go-to resource for building beautiful, powerful apps with Nowa's visual development platform.
 slug: welcome-to-nowa-blog
 authors: [anas]
+date: 2025-06-27
 tags: [general]
+keywords: [flutter, Nowa learning]
 image: https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&h=630&fit=crop
+enable_comments: true 
 hide_table_of_contents: true
 ---
 

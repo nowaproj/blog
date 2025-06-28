@@ -1,12 +1,3 @@
-james_wilson:
-  name: James Wilson
-  title: Tech Lead at Nowa
-  url: https://twitter.com/anasalsalhi4
-  image_url: https://firebasestorage.googleapis.com/v0/b/nowa-website-debbc.appspot.com/o/team%20members%2Fanas.webp?alt=media
-  socials:
-    twitter: anasalsalhi4
-    github: jameswilson
-
 anas:
   name: Anas Alsalhi
   title: Founder at Nowa
@@ -15,78 +6,5 @@ anas:
   socials:
     x: anasalsalhi4
     linkedin: anas-alsalhi
-
-
-sarah_chen:
-  name: Sarah Chen
-  title: Senior Flutter Developer at Nowa
-  url: https://github.com/sarahchen
-  image_url: https://avatars.githubusercontent.com/u/1000001?v=4
-  socials:
-    twitter: sarahchen_dev
-    github: sarahchen
-
-alex_rodriguez:
-  name: Alex Rodriguez
-  title: Product Manager at Nowa
-  url: https://linkedin.com/in/alexrodriguez
-  image_url: https://avatars.githubusercontent.com/u/2000002?v=4
-  socials:
-    linkedin: alexrodriguez
-    twitter: alex_codes
-
-david_kim:
-  name: David Kim
-  title: Co-founder & CEO at Nowa
-  url: https://twitter.com/davidkim_nowa
-  image_url: https://avatars.githubusercontent.com/u/4000004?v=4
-  socials:
-    twitter: davidkim_nowa
-    linkedin: david-kim-nowa
-
-michael_zhang:
-  name: Michael Zhang
-  title: Performance Engineer at Nowa
-  url: https://github.com/michaelzhang
-  image_url: https://avatars.githubusercontent.com/u/5000005?v=4
-  socials:
-    github: michaelzhang
-    twitter: michael_perf
-
-emma_thompson:
-  name: Emma Thompson
-  title: UX Designer at Nowa
-  url: https://dribbble.com/emmathompson
-  image_url: https://avatars.githubusercontent.com/u/3000003?v=4
-  socials:
-    dribbble: emmathompson
-    linkedin: emma-thompson-ux
-
-lisa_park:
-  name: Lisa Park
-  title: Design Systems Lead at Nowa
-  url: https://linkedin.com/in/lisapark-design
-  image_url: https://avatars.githubusercontent.com/u/6000006?v=4
-  socials:
-    linkedin: lisapark-design
-    behance: lisapark
-
-joel_marcey:
-  name: Joel Marcey
-  title: Co-creator of Docusaurus 1
-  url: https://github.com/JoelMarcey
-  image_url: https://github.com/JoelMarcey.png
-  socials:
-    x: joelmarcey
-    github: JoelMarcey
-
-sebastien_lorber:
-  name: Sébastien Lorber
-  title: Docusaurus maintainer
-  url: https://sebastienlorber.com
-  image_url: https://github.com/slorber.png
-  socials:
-    x: sebastienlorber
-    github: slorber
 
 
