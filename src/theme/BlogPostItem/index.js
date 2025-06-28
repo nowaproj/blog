@@ -1,10 +1,11 @@
 import React from 'react';
 import OriginalBlogPostItem from '@theme-original/BlogPostItem';
 import Head from '@docusaurus/Head';
+import GiscusComments from '@site/src/components/GiscusComments';
 
 export default function BlogPostItem(props) {
-  // Get metadata from props instead of using the problematic useBlogPost hook
-  const metadata = props.children?.props?.metadata || props.metadata;
+  // Get metadata from props
+  const metadata = props.children?.type?.metadata || props.metadata;
   
   // Only add structured data if we have metadata
   if (!metadata) {
@@ -46,6 +47,9 @@ export default function BlogPostItem(props) {
     structuredData.timeRequired = `PT${Math.ceil(metadata.readingTime)}M`;
   }
 
+  // Show comments by default, unless explicitly disabled in frontmatter
+  const shouldShowComments = metadata.frontMatter?.hide_comments !== true;
+
   return (
     <>
       <Head>
@@ -79,6 +83,13 @@ export default function BlogPostItem(props) {
         <link rel="canonical" href={`https://blog.nowa.dev${metadata.permalink}`} />
       </Head>
       <OriginalBlogPostItem {...props} />
+      
+      {/* Add comments section */}
+      {shouldShowComments && (
+        <div style={{ marginTop: '2rem', paddingTop: '2rem', borderTop: '1px solid var(--ifm-color-emphasis-300)' }}>
+          <GiscusComments />
+        </div>
+      )}
     </>
   );
 } 
