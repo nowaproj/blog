@@ -104,7 +104,18 @@ article h2 a:hover {
 
 .avatar__name {
   font-weight: 600;
-  color: var(--ifm-font-color-base);
+  color: var(--ifm-font-color-base) !important;
+}
+
+/* Ensure author name links also use base color */
+.avatar__name a {
+  color: var(--ifm-font-color-base) !important;
+  text-decoration: none;
+}
+
+.avatar__name a:hover {
+  color: var(--ifm-font-color-base) !important;
+  text-decoration: none;
 }
 
 .avatar__subtitle {
@@ -228,7 +239,7 @@ main article {
   font-weight: 600;
   margin-top: 2rem;
   margin-bottom: 0.75rem;
-  color: var(--ifm-color-primary);
+  color: var(--ifm-font-color-base);
 }
 
 .markdown h4 {
@@ -236,6 +247,23 @@ main article {
   font-weight: 600;
   margin-top: 1.5rem;
   margin-bottom: 0.5rem;
+  color: var(--ifm-font-color-base);
+}
+
+.markdown h5 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: var(--ifm-font-color-base);
+}
+
+.markdown h6 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  color: var(--ifm-font-color-base);
 }
 
 /* Paragraph spacing */
