@@ -2,8 +2,11 @@ import React from 'react';
 import OriginalBlogPostItem from '@theme-original/BlogPostItem';
 import Head from '@docusaurus/Head';
 import GiscusComments from '@site/src/components/GiscusComments';
+import { useLocation } from '@docusaurus/router';
 
 export default function BlogPostItem(props) {
+  const location = useLocation();
+  
   // Get metadata from props
   const metadata = props.children?.type?.metadata || props.metadata;
   
@@ -11,6 +14,9 @@ export default function BlogPostItem(props) {
   if (!metadata) {
     return <OriginalBlogPostItem {...props} />;
   }
+  
+  // Detect if we're on an individual blog post page (not on the main blog listing)
+  const isBlogPost = location.pathname !== '/' && location.pathname.includes('/');
   
   // Create structured data for the blog post
   const structuredData = {
@@ -48,7 +54,8 @@ export default function BlogPostItem(props) {
   }
 
   // Show comments by default, unless explicitly disabled with enable_comments: false
-  const shouldShowComments = metadata.frontMatter?.enable_comments !== false;
+  // But only show comments on individual blog post pages, not on the blog listing page
+  const shouldShowComments = metadata.frontMatter?.enable_comments !== false && isBlogPost;
 
   return (
     <>
