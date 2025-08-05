@@ -4,12 +4,11 @@ description: With Nowa 3.0, the Free Plan now includes unlimited code downloads,
 slug: nowa-3-free-plan-upgrade
 authors: [anas]
 date: 2025-08-05
-tags: [pricing, announcement]
+tags: [pricing, announcement, free-plan, ai]
 keywords: [Nowa 3.0, Free Plan, Flutter app builder, AI agent, unlimited code download, hot reload, local projects]
-image: https://framerusercontent.com/images/naxdJFnS0uouP3sqqWxyeooX5Us.png
+image: https://storage.googleapis.com/nowa-downloads/assets/images/nowa-3.0-release-banner.png
 hide_table_of_contents: false
 ---
-
 
 # 🚀 Nowa Free Plan Just Got a Big Upgrade — Unlimited Code, Local Projects, and AI!
 
@@ -88,33 +87,26 @@ The link stays live for **12 hours**, perfect for testing or showing it to frien
 
 ---
 
-## 💸 About the paid plans
+## 💸 Plan Comparison
 
-We renamed the old **Pro** and **Premium** plans — they’re now called **Launch** and **Scale**.
+| Feature                                     | Starter (Free) | Launch ($24/mo)           | Scale ($49/mo)                | Enterprise (Custom)      |
+|--------------------------------------------|----------------|----------------------------|-------------------------------|--------------------------|
+| Unlimited projects & code downloads        | ✅              | ✅                          | ✅                             | ✅                        |
+| AI messages/month                          | 5              | 50                         | 200 + top-up option           | Custom                   |
+| Local & cloud projects                     | ✅              | ✅                          | ✅                             | ✅                        |
+| Unlimited API endpoints                    | ✅              | ✅                          | ✅                             | ✅                        |
+| Supabase & Firebase integration            | ✅              | ✅                          | ✅                             | ✅                        |
+| All templates                              | ✅              | ✅                          | ✅                             | ✅                        |
+| Access to Web & Desktop version            | ✅              | ✅                          | ✅                             | ✅                        |
+| Web test publishing (12h)                  | ✅              | ✅                          | ✅                             | ✅                        |
+| One-click web build                        | ❌              | ✅                          | ✅                             | ✅                        |
+| Web hosting with custom domain             | ❌              | ✅                          | ✅                             | ✅                        |
+| One-click deploy to Android & iOS          | ❌              | ❌                          | ✅                             | ✅                        |
+| GitHub integration                         | ❌              | ❌                          | ✅                             | ✅                        |
+| Support level                              | Community       | Email                      | Premium (1:1 support)         | Dedicated channels       |
+| Custom features (SSO, audit logs, etc.)    | ❌              | ❌                          | ❌                             | ✅                        |
 
-### 🚀 Launch
-
-Great for indie builders who want more AI + web hosting:
-
-- 50 AI messages/month  
-- Unlimited web builds (host anywhere)  
-- Live web publishing with custom domain  
-- Extra support from the team  
-
-### ⚡ Scale
-
-Built for teams or pros working on big projects:
-
-- 200 AI messages/month (with top-ups available)  
-- GitHub integration  
-- 1-click deploy to iOS + Android (and future updates)  
-- Premium support (we’ll even hop on a 1:1 call if needed)  
-
-### 🏢 Custom plans
-
-Need something tailored to your company or team? We’ve got you covered.
-
-👉 [Check out the full comparison](https://nowa.dev/pricing)
+👉 [See full pricing comparison](https://nowa.dev/pricing)
 
 ---
 
