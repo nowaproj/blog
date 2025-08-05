@@ -55,7 +55,10 @@ export default function BlogPostItem(props) {
 
   // Show comments by default, unless explicitly disabled with enable_comments: false
   // But only show comments on individual blog post pages, not on the blog listing page
-  const shouldShowComments = metadata.frontMatter?.enable_comments !== false && isBlogPost;
+  // TEMPORARILY DISABLED: Set to false to disable all comments
+  const shouldShowComments = false; 
+  //this is how it was before, revert back when you want to enable comments. This will make it depened on the tags from each post.
+  // const shouldShowComments = metadata.frontMatter?.enable_comments !== false && isBlogPost;// metadata.frontMatter?.enable_comments !== false && isBlogPost;
 
   return (
     <>
