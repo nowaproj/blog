@@ -15,7 +15,7 @@ hide_table_of_contents: false
 
 Since we launched **Nowa 3.0**, many of you have already started exploring the power of the **AI agent** — some of you even built full apps just a few hours after launch. That’s beyond exciting!
 
-We’re using a **premium AI model** that we’ve optimized and fine-tuned to generate **modern, stunning UIs**, **great UX**, **clean structure**, and **solid functionality** — it’s so powerful you can build a complete app in just 1–3 prompts.
+We’re using a **premium AI model** that we’ve optimized to generate **modern, stunning UIs**, **great UX**, **clean structure**, and **solid functionality** — it’s so powerful you can build a complete app in just 1–3 prompts.
 
 But since Nowa is still in **BETA**, things may not always go perfectly — and that’s where we need your help.
 
