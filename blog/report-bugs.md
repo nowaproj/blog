@@ -19,6 +19,8 @@ We’re using a **premium AI model** that we’ve optimized and fine-tuned to ge
 
 But since Nowa is still in **BETA**, things may not always go perfectly — and that’s where we need your help.
 
+<!-- truncate -->
+
 ---
 
 ## 🐛 Help us and get free AI credits!

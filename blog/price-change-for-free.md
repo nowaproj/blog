@@ -17,6 +17,8 @@ hide_table_of_contents: false
 Big news — with the launch of **Nowa 3.0**, we’ve made some major changes to our pricing plans to make Nowa way more accessible for everyone!  
 We preserved our pricing and added more to every plan — and made the **Free Plan** way more useful!
 
+<!-- truncate -->
+
 ---
 
 ## 💡 Why we did this
