@@ -1,14 +1,29 @@
 import React from 'react';
 import ReadingProgress from '@site/src/components/ReadingProgress';
 import { PostHogProvider } from 'posthog-js/react';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
 // Default implementation, that you can customize
 function Root({children}) {
+  const {siteConfig} = useDocusaurusContext();
+  
   // Check if we're in a browser environment and have PostHog keys
   const isClient = typeof window !== 'undefined';
-  const posthogKey = typeof import.meta !== 'undefined' && import.meta.env ? import.meta.env.VITE_PUBLIC_POSTHOG_KEY : undefined;
-  const posthogHost = typeof import.meta !== 'undefined' && import.meta.env ? import.meta.env.VITE_PUBLIC_POSTHOG_HOST : undefined;
-  const isDevelopment = typeof import.meta !== 'undefined' && import.meta.env ? import.meta.env.MODE === 'development' : false;
+  
+  // Get PostHog configuration from site config
+  const posthogKey = siteConfig.customFields?.posthogKey;
+  const posthogHost = siteConfig.customFields?.posthogHost;
+  const isDevelopment = process.env.NODE_ENV === 'development';
+
+  // Debug logging
+  if (isClient && isDevelopment) {
+    console.log('PostHog Debug:', {
+      posthogKey: posthogKey ? 'Present' : 'Missing',
+      posthogHost: posthogHost ? 'Present' : 'Missing',
+      isDevelopment,
+      customFields: siteConfig.customFields
+    });
+  }
 
   // Only render PostHogProvider on client-side with valid keys
   if (isClient && posthogKey && posthogHost) {

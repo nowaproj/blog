@@ -25,6 +25,12 @@ const config = {
   baseUrl: '/',
   trailingSlash: false,
 
+  // Custom fields to expose environment variables
+  customFields: {
+    posthogKey: process.env.VITE_PUBLIC_POSTHOG_KEY,
+    posthogHost: process.env.VITE_PUBLIC_POSTHOG_HOST,
+  },
+
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'nowaproj', // Usually your GitHub org/user name.
