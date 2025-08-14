@@ -25,10 +25,34 @@ const ListComponent: BlogSidebarContentProps['ListComponent'] = ({items}) => {
 
 function BlogSidebarDesktop({sidebar}: Props) {
   const items = useVisibleBlogSidebarItems(sidebar.items);
-  const [isCollapsed, setIsCollapsed] = useState(false);
-  const [sidebarWidth, setSidebarWidth] = useState(300);
+  const [isCollapsed, setIsCollapsed] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return localStorage.getItem('blog-sidebar-collapsed') === 'true';
+    }
+    return false;
+  });
+  const [sidebarWidth, setSidebarWidth] = useState(() => {
+    if (typeof window !== 'undefined') {
+      const saved = localStorage.getItem('blog-sidebar-width');
+      return saved ? parseInt(saved, 10) : 300;
+    }
+    return 300;
+  });
   const [isResizing, setIsResizing] = useState(false);
   const sidebarRef = useRef<HTMLDivElement>(null);
+
+  // Persist sidebar state
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('blog-sidebar-collapsed', isCollapsed.toString());
+    }
+  }, [isCollapsed]);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('blog-sidebar-width', sidebarWidth.toString());
+    }
+  }, [sidebarWidth]);
 
   // Handle toggle collapse
   const handleToggle = useCallback(() => {
@@ -96,11 +120,19 @@ function BlogSidebarDesktop({sidebar}: Props) {
         <svg
           width="16"
           height="16"
-          viewBox="0 0 16 16"
-          fill="currentColor"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
           className={clsx(styles.toggleIcon, isCollapsed && styles.collapsed)}
         >
-          <path d="M6 2L10 8L6 14V2Z" />
+          {isCollapsed ? (
+            <path d="M3 12h18m-9-9l9 9-9 9" />
+          ) : (
+            <path d="M21 12H3m9-9l-9 9 9 9" />
+          )}
         </svg>
       </button>
 

@@ -5,49 +5,55 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-/* Sidebar Container */
+/* Sidebar Container - Seamless design */
 .sidebarContainer {
   position: relative;
   height: 100vh;
-  border-right: 1px solid var(--ifm-color-emphasis-200);
-  background: var(--ifm-background-surface-color);
+  background: transparent;
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  transition: width 0.3s ease;
 }
 
 .sidebarContainer.collapsed {
-  border-right: 1px solid var(--ifm-color-emphasis-300);
+  background: transparent;
 }
 
-/* Toggle Button */
+/* Show resize hint on sidebar hover */
+.sidebarContainer:hover .resizeHandle {
+  opacity: 0.6;
+}
+
+.sidebarContainer:hover .resizeHandle::before {
+  opacity: 0.4;
+}
+
+/* Toggle Button - More visible and accessible */
 .toggleButton {
   position: absolute;
-  top: 1rem;
-  right: 8px;
+  top: 0.75rem;
+  left: 0.75rem;
   z-index: 10;
-  background: var(--ifm-color-primary);
-  border: none;
-  border-radius: 50%;
+  background: var(--ifm-color-emphasis-100);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 4px;
   width: 24px;
   height: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  color: white;
+  color: var(--ifm-color-emphasis-600);
   transition: all 0.2s ease;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  opacity: 0.8;
 }
 
 .toggleButton:hover {
-  background: var(--ifm-color-primary-dark);
-  transform: scale(1.05);
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
-}
-
-.toggleButton:active {
-  transform: scale(0.95);
+  background: var(--ifm-color-emphasis-200);
+  color: var(--ifm-color-emphasis-800);
+  opacity: 1;
+  border-color: var(--ifm-color-emphasis-300);
 }
 
 .toggleIcon {
@@ -58,21 +64,20 @@
   transform: rotate(180deg);
 }
 
-/* Main Sidebar */
+/* Main Sidebar - Back to original design */
 .sidebar {
   max-height: calc(100vh - (var(--ifm-navbar-height) + 2rem));
   overflow-y: auto;
   position: sticky;
   top: calc(var(--ifm-navbar-height) + 2rem);
   padding: 1rem;
-  padding-top: 3rem; /* Make room for toggle button */
+  padding-top: 2.5rem; /* Make room for toggle button */
   flex: 1;
 }
 
 .sidebarItemTitle {
   font-size: var(--ifm-h3-font-size);
   font-weight: var(--ifm-font-weight-bold);
-  color: var(--ifm-color-emphasis-900);
 }
 
 .sidebarItemList {
@@ -86,68 +91,65 @@
 .sidebarItemLink {
   color: var(--ifm-font-color-base);
   display: block;
-  padding: 0.25rem 0;
-  border-radius: 0.25rem;
-  transition: all 0.2s ease;
 }
 
 .sidebarItemLink:hover {
   text-decoration: none;
-  background: var(--ifm-color-emphasis-100);
-  padding-left: 0.5rem;
 }
 
 .sidebarItemLinkActive {
   color: var(--ifm-color-primary) !important;
-  font-weight: 600;
-  background: rgba(233, 137, 14, 0.1);
-  padding-left: 0.5rem;
 }
 
-/* Resize Handle */
+/* Resize Handle - Elegant visual cue */
 .resizeHandle {
   position: absolute;
   top: 0;
-  right: 0;
-  width: 4px;
+  right: -1px;
+  width: 3px;
   height: 100%;
-  background: transparent;
+  background: var(--ifm-color-emphasis-200);
   cursor: col-resize;
   z-index: 5;
-  transition: background 0.2s ease;
+  transition: all 0.2s ease;
+  opacity: 0.3;
 }
 
 .resizeHandle:hover {
   background: var(--ifm-color-primary);
-  opacity: 0.5;
+  opacity: 0.8;
+  width: 4px;
+  right: -2px;
 }
 
-.resizeHandle::after {
+/* Subtle resize dots indicator */
+.resizeHandle::before {
   content: '';
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 8px;
-  height: 40px;
-  background: transparent;
-  border-radius: 4px;
+  width: 2px;
+  height: 20px;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0px,
+    transparent 2px,
+    var(--ifm-color-emphasis-400) 2px,
+    var(--ifm-color-emphasis-400) 4px
+  );
+  opacity: 0;
+  transition: opacity 0.2s ease;
 }
 
-.resizeHandle:hover::after {
-  background: var(--ifm-color-primary);
-  opacity: 0.7;
+.resizeHandle:hover::before {
+  opacity: 0.6;
 }
 
-/* Year Group Heading */
+/* Year Group Heading - Back to original */
 .yearGroupHeading {
   margin-top: 1.6rem;
   margin-bottom: 0.4rem;
-  font-weight: 600;
-  color: var(--ifm-color-emphasis-700);
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
 }
 
 /* Responsive */
@@ -159,21 +161,23 @@
 
 /* Dark mode adjustments */
 [data-theme='dark'] .toggleButton {
-  background: var(--ifm-color-primary);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  background: var(--ifm-color-emphasis-200);
+  border-color: var(--ifm-color-emphasis-300);
+  color: var(--ifm-color-emphasis-700);
 }
 
 [data-theme='dark'] .toggleButton:hover {
-  background: var(--ifm-color-primary-light);
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+  background: var(--ifm-color-emphasis-300);
+  color: var(--ifm-color-emphasis-900);
+  border-color: var(--ifm-color-emphasis-400);
 }
 
-[data-theme='dark'] .sidebarContainer {
-  border-right-color: var(--ifm-color-emphasis-300);
+[data-theme='dark'] .resizeHandle {
+  background: var(--ifm-color-emphasis-300);
 }
 
-[data-theme='dark'] .sidebarItemLink:hover {
-  background: var(--ifm-color-emphasis-200);
+[data-theme='dark'] .resizeHandle:hover {
+  background: var(--ifm-color-primary);
 }
 
 /* Focus states for accessibility */
@@ -185,20 +189,4 @@
 .resizeHandle:focus {
   background: var(--ifm-color-primary);
   opacity: 0.7;
-}
-
-/* Animation for smooth transitions */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateX(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.sidebar {
-  animation: fadeIn 0.3s ease;
 }
