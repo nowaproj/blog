@@ -62,7 +62,29 @@ The more context you give, the fewer assumptions the AI has to make.
 
 ---
 
-## 5️⃣ Master the Sandwich Technique (Intent → Context → Task → Constraints)
+## 5️⃣ Start a new chat when context drifts
+
+When your next request isn’t closely related to the current thread, **start a fresh chat**.  
+Old conversations can bias the AI toward previous topics and decisions.
+
+**Why it helps**
+- Keeps the AI focused on the **current goal**
+- Reduces accidental carry-over from older prompts
+- Improves clarity and results — especially when switching features
+
+✅ *Good*:  
+“**New chat**: Build an ‘Orders’ screen with filters (status, date). Attach `orders_list.dart`.”  
+
+❌ *Risky*:  
+“**Same chat about homepage styling**: Also add Supabase auth and reset password.”
+
+:::tip[Rule of thumb]
+Keep a chat to **~5 prompts**. If you’re switching features or the thread feels unrelated, **start a new one** and attach the relevant screen/widget.
+:::
+
+---
+
+## 6️⃣ Master the Sandwich Technique (Intent → Context → Task → Constraints)
 
 The “prompt sandwich” is a simple but powerful structure:
 
@@ -74,24 +96,23 @@ The “prompt sandwich” is a simple but powerful structure:
 **Example:**
 ```
 #Intent
-I want to build a modern homepage for my shoe store app. 
+I want to build a modern homepage for my shoe store app.
 
 #Context
 • Show main promotion at the top
 • Display products in a grid with price and image
-• Mobile-first approach 
+• Mobile-first approach
 
 #Task
-Build the homepage as described above. ← Task
+Build the homepage as described above.
 
 #Constraints
-Keep the design clean and modern, and the implementation simple. 
-
+Keep the design clean and modern, and the implementation simple.
 ```
 
 ---
 
-## 6️⃣ Be clear with style & function
+## 7️⃣ Be clear with style & function
 
 Avoid vague words like “nice” or “beautiful.” Instead, be specific:
 - “Use a dark theme with high-contrast text”
@@ -100,7 +121,7 @@ Avoid vague words like “nice” or “beautiful.” Instead, be specific:
 
 ---
 
-## 7️⃣ Fixing errors? Just ask!
+## 8️⃣ Fixing errors? Just ask!
 
 Nowa AI can **detect and fix errors in your project**.  
 Simply prompt it:
@@ -117,7 +138,7 @@ It will locate the issue and apply the fix automatically.
 
 ---
 
-## 8️⃣ Report issues — earn free AI credits
+## 9️⃣ Report issues — earn free AI credits
 
 If you find a bug, let us know!  
 1. Click the **Feedback** button → **Report**  
@@ -129,7 +150,7 @@ We reward **valid reports** with free AI credits. [Full details here](./report-b
 :::
 ---
 
-## 9️⃣ Use the community
+## 🔟 Use the community
 
 Join our [Discord community](https://discord.gg/ByKfn3H7gX) to:
 - Get help from the Nowa team and other users
@@ -138,7 +159,7 @@ Join our [Discord community](https://discord.gg/ByKfn3H7gX) to:
 
 ---
 
-## 🔟 Bonus tip — Think like a pair programmer
+## Bonus tip — Think like a pair programmer
 
 Treat Nowa AI as a collaborator, not just a code generator.  
 Explain your thought process, review outputs, and iterate together for the best results.
