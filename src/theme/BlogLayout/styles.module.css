@@ -1,0 +1,32 @@
+/* Blog Layout Wrapper */
+.blog-layout-wrapper {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+}
+
+/* Ensure the main content area expands properly */
+.blog-layout-wrapper :global(.container) {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+}
+
+/* Adjust the main content area to work with flexible sidebar */
+.blog-layout-wrapper :global(.row) {
+  flex: 1;
+  margin: 0;
+  display: flex;
+}
+
+/* Make the main content column flexible */
+.blog-layout-wrapper :global(.col) {
+  flex: 1;
+  min-width: 0;
+  padding-left: 1rem;
+}
+
+/* Ensure proper spacing when sidebar is present */
+.blog-layout-wrapper :global(.col):not(:first-child) {
+  padding-left: 0;
+}

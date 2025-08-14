@@ -429,6 +429,25 @@ code:not([class*="language-"]) {
   }
 }
 
+/* ===== RESIZABLE SIDEBAR SUPPORT ===== */
+
+/* Ensure the main wrapper can accommodate the resizable sidebar */
+.main-wrapper {
+  display: flex;
+  flex: 1;
+}
+
+/* Adjust the main container to work with custom sidebar */
+main .container {
+  max-width: none !important;
+  flex: 1;
+}
+
+/* Ensure blog post cards maintain proper spacing regardless of sidebar size */
+.blog-layout-wrapper .container .row {
+  margin: 0;
+}
+
 /* ===== ENHANCED INTERACTIONS ===== */
 
 /* Smooth scroll behavior */
