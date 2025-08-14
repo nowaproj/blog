@@ -22,11 +22,11 @@
 
 /* Show resize hint on sidebar hover */
 .sidebarContainer:hover .resizeHandle {
-  opacity: 0.6;
+  opacity: 0.4;
 }
 
 .sidebarContainer:hover .resizeHandle::before {
-  opacity: 0.4;
+  opacity: 0.3;
 }
 
 /* Toggle Button - More visible and accessible */
@@ -101,25 +101,25 @@
   color: var(--ifm-color-primary) !important;
 }
 
-/* Resize Handle - Elegant visual cue */
+/* Resize Handle - Balanced subtle visual cue */
 .resizeHandle {
   position: absolute;
   top: 0;
   right: -1px;
-  width: 3px;
+  width: 2px;
   height: 100%;
   background: var(--ifm-color-emphasis-200);
   cursor: col-resize;
   z-index: 5;
   transition: all 0.2s ease;
-  opacity: 0.3;
+  opacity: 0.25;
 }
 
 .resizeHandle:hover {
   background: var(--ifm-color-primary);
-  opacity: 0.8;
-  width: 4px;
-  right: -2px;
+  opacity: 0.6;
+  width: 3px;
+  right: -1px;
 }
 
 /* Subtle resize dots indicator */
@@ -129,21 +129,21 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 2px;
-  height: 20px;
+  width: 1px;
+  height: 18px;
   background: repeating-linear-gradient(
     to bottom,
     transparent 0px,
     transparent 2px,
     var(--ifm-color-emphasis-400) 2px,
-    var(--ifm-color-emphasis-400) 4px
+    var(--ifm-color-emphasis-400) 3px
   );
   opacity: 0;
   transition: opacity 0.2s ease;
 }
 
 .resizeHandle:hover::before {
-  opacity: 0.6;
+  opacity: 0.5;
 }
 
 /* Year Group Heading - Back to original */
@@ -174,10 +174,12 @@
 
 [data-theme='dark'] .resizeHandle {
   background: var(--ifm-color-emphasis-300);
+  opacity: 0.2;
 }
 
 [data-theme='dark'] .resizeHandle:hover {
   background: var(--ifm-color-primary);
+  opacity: 0.5;
 }
 
 /* Focus states for accessibility */
