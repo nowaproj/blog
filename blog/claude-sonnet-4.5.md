@@ -22,6 +22,9 @@ Today, we’ve taken a big step forward:
 
 So, what’s new — and what’s next? Let’s take a look.  
 
+![](/img/single/claude4.5.png)
+
+
 <!-- truncate -->
 
 ---
