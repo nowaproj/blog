@@ -7,7 +7,7 @@ date: 2025-09-30
 tags: [ai, flutter, claude, nowa]
 keywords: [Nowa AI, Claude Sonnet 4.5, Flutter app builder, AI agent, Nowa 3.0]
 hide_table_of_contents: false
-image: /img/single/claude4.5.png
+image: https://blog.nowa.dev/assets/images/claude4.5-7ce75a7fa25166d354b5615fb50509f8.png
 
 ---
 
