@@ -12,7 +12,7 @@ hide_table_of_contents: false
 
 Hey builders 👋  
 
-If you want to power your app with AI—no coding required—this guide will walk you through a few simple steps to integrate ChatGPT into your Nowa project and get your app talking in no time.
+If you want to power your app with AI, this guide will walk you through a few simple steps to integrate ChatGPT into your Nowa project and get your app talking in no time.
 
 ![](/img/chatgpt/chatgpt.png)
 
