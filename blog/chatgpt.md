@@ -16,6 +16,8 @@ If you want to power your app with AI, this guide will walk you through a few si
 
 ![](/img/chatgpt/chatgpt.png)
 
+<!-- truncate -->
+
 ---
 
 ## Why Add ChatGPT to Your App?

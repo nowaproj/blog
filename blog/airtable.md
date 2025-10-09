@@ -3,7 +3,7 @@ title: How I Connected Airtable to Nowa (Step by Step)
 description: I recently set up Airtable with Nowa for one of my apps—here’s exactly how I did it.
 slug: airtable
 authors: [anas, gellert]
-date: 2025-10-06
+date: 2025-10-09
 tags: [database, airtable]
 keywords: [database, app development, Flutter AI, Nowa AI, Airtable integration, alpha testing, smart assistant]
 hide_table_of_contents: false
@@ -16,6 +16,8 @@ A few days ago, I needed a quick way to pull dynamic data into one of my Nowa ap
 I decided to give Airtable a try—and honestly, it turned out to be a smooth process.  
 
 So in this post, I’ll walk you through how I personally connected Airtable to Nowa, step by step.
+
+<!-- truncate -->
 
 ---
 
