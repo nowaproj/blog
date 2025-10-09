@@ -12,9 +12,7 @@ hide_table_of_contents: false
 
 Hey builders 👋  
 
-If you’ve ever dreamed of adding AI magic to your Nowa app — like smart chat, instant responses, or natural text generation — this guide is for you.  
-
-Even if you’re **not a coder**, you can easily integrate **ChatGPT** into your Nowa project using just a few simple steps. Let’s walk you through the whole process together and get your app talking in no time!  
+If you want to power your app with AI—no coding required—this guide will walk you through a few simple steps to integrate ChatGPT into your Nowa project and get your app talking in no time.
 
 ![](/img/chatgpt/chatgpt.png)
 
@@ -147,8 +145,6 @@ If you don't know how to use APIs in Nowa,
 ---
 
 ## Step 5: Let Nowa Do the Heavy Lifting
-
-Here’s where the magic happens ✨  
 
 Nowa comes with **prebuilt screens**  that take care of all the tricky setup for you.  
 
