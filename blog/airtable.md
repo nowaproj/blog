@@ -1,5 +1,5 @@
 ---
-title: How I Connected Airtable to Nowa (Step by Step)
+title: How I Connected Airtable to Nowa
 description: I recently set up Airtable with Nowa for one of my apps—here’s exactly how I did it.
 slug: airtable
 authors: [anas, gellert]
