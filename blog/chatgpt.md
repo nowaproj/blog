@@ -2,9 +2,9 @@
 title: Integrating ChatGPT into Your App
 description: We’re here to help you seamlessly integrate ChatGPT into your app.
 slug: chatgpt
-authors: [anas, gellert]
+authors: [gellert]
 date: 2025-10-06
-tags: [ai, chatgpt]
+tags: [ai, api]
 keywords: [AI agent, app development, Flutter AI, Nowa AI, ChatGPT integration, alpha testing, smart assistant]
 image: /img/chatgpt.png
 hide_table_of_contents: false

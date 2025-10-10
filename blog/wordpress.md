@@ -2,9 +2,9 @@
 title: A Simple Example Using WordPress Data 
 description: A Simple Example Using WordPress Data is a beginner-friendly guide that walks you through creating your first mobile app using Nowa
 slug: wordpress
-authors: [anas, gellert]
+authors: [gellert]
 date: 2025-10-10
-tags: [wordpress]
+tags: [wordpress, api]
 keywords: [AI agent, app development, Flutter AI, Nowa AI, alpha testing, smart assistant]
 hide_table_of_contents: false
 ---
