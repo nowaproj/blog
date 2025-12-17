@@ -98,6 +98,9 @@ const config = {
           showReadingTime: true,
           blogTitle: BLOG_TITLE,
           blogDescription: BLOG_DESCRIPTION,
+          blogSidebarCount: 'ALL',  // ← Add this to show all posts
+          blogSidebarTitle: 'All Posts',  // ← Optional: customize sidebar title
+        
           feedOptions: {
             type: 'all',
             title: BLOG_TITLE,
@@ -123,7 +126,11 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       image: 'img/logo.svg',
-
+      blog: {  // ← Add this entire block
+        sidebar: {
+          groupByYear: true,  // Groups posts by year and month
+        },
+      },
       // Replace with your project's social card
       colorMode: {
         defaultMode: 'dark',
