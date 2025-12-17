@@ -166,8 +166,6 @@ article a[href*="/"]:not(.avatar__name):hover {
 
 /* Main article container */
 main article {
-  max-width: var(--blog-reading-width);
-  margin: 0 auto;
   padding: 2rem 1rem;
 }
 
@@ -318,13 +316,27 @@ code:not([class*="language-"]) {
   height: auto;
 }
 
+/* Videos and iframes - ensure they don't overflow container */
+.markdown video,
+.markdown iframe {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  margin: 1.5rem 0;
+}
+
 /* Table of contents */
 .table-of-contents {
   background: var(--ifm-background-surface-color);
   border-radius: 0.5rem;
   padding: 1rem;
   margin-bottom: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
   border: 1px solid var(--ifm-color-emphasis-200);
+  /* position: sticky; */
+  top: 5rem;
+  box-sizing: border-box;
 }
 
 .table-of-contents__link {
