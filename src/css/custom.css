@@ -21,7 +21,6 @@
   --blog-card-shadow-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
   --blog-card-radius: 0.75rem;
   --blog-spacing: 2rem;
-  --blog-reading-width: 65ch;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -169,31 +168,19 @@ main article {
   padding: 2rem 1rem;
 }
 
-/* Improve TOC layout without horizontal scroll */
+/* Doc page TOC (not used in blog, but keeping for consistency) */
 .theme-doc-toc-desktop {
   flex: 0 0 300px;
   max-width: 300px;
   margin-left: 1.5rem;
 }
 
-.table-of-contents {
-  background: var(--ifm-background-surface-color);
-  border-radius: 0.5rem;
-  padding: 1.5rem !important;
-  margin-bottom: 2rem;
-  border: 1px solid var(--ifm-color-emphasis-200);
-  width: 100%;
-  box-sizing: border-box;
-}
-
-/* Ensure proper flex layout for main content area */
 .theme-doc-sidebar-container {
   display: flex;
   flex: 1;
   max-width: 100%;
 }
 
-/* Make the main content area flexible */
 .theme-doc-markdown {
   flex: 1;
   min-width: 0;
@@ -453,6 +440,16 @@ code:not([class*="language-"]) {
 main .container {
   max-width: none !important;
   flex: 1;
+}
+
+/* ===== SIDEBAR COLLAPSE BEHAVIOR ===== */
+
+/* Override col--7 constraint to allow main content to expand when sidebar collapses */
+.container > .row:has(aside[style*="width: 40px"]) > main.col--7,
+.container > .row:has(aside[style*="width:40px"]) > main.col--7 {
+  flex: 1 1 0%;
+  width: auto !important;
+  max-width: none !important;
 }
 
 /* Ensure blog post cards maintain proper spacing regardless of sidebar size */
