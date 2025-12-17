@@ -447,9 +447,19 @@ main .container {
 /* Override col--7 constraint to allow main content to expand when sidebar collapses */
 .container > .row:has(aside[style*="width: 40px"]) > main.col--7,
 .container > .row:has(aside[style*="width:40px"]) > main.col--7 {
-  flex: 1 1 0%;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+  min-width: 0;
   width: auto !important;
   max-width: none !important;
+}
+
+/* Keep TOC at fixed width so main gets most of the space */
+.container > .row:has(aside[style*="width: 40px"]) > .col--2,
+.container > .row:has(aside[style*="width:40px"]) > .col--2 {
+  flex: 0 0 auto;
+  width: 280px;
 }
 
 /* Ensure blog post cards maintain proper spacing regardless of sidebar size */
