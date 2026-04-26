@@ -1,5 +1,5 @@
 ---
-title: Why Nowa Feels Different From Other AI Coding Tools
+title: How AI in Nowa feels Different From Claude Code, Lovable and Replit
 description: It's not about the model. It's about how the AI deals with your project. Here's the architectural decision behind why Nowa runs faster, handles big projects better, and generates code that actually holds up.
 slug: why-nowa-feels-different
 authors: [anas]
