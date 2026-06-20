@@ -6,7 +6,7 @@ authors: [anas]
 date: 2026-06-20
 tags: [announcement, ai, free-plan]
 keywords: [Nowa free weekend, build an app, free AI credits, app challenge, Flutter app builder, Nowa 3.9]
-image: https://blog.nowa.dev/img/nowa-free-weekend-hook-A.png
+image: https://blog.nowa.dev/img/nowa-free-weekend-1080.png
 hide_table_of_contents: false
 ---
 
@@ -18,7 +18,7 @@ We're really excited to open Nowa up for everyone, for free, all weekend.
 
 We know a lot of you have a good idea sitting in the back of your mind. Maybe you tried to build it before and got stuck with the tools you had. Or maybe you just never had the time. Either way, we want to give you a reason to finally build it and put it out into the world.
 
-![Nowa is free all weekend — go build that idea](/img/nowa-free-weekend-hook-A.png)
+![Nowa is free all weekend — go build that idea](/img/nowa-free-weekend-1080.png)
 
 <!-- truncate -->
 
