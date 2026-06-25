@@ -3,7 +3,7 @@ title: Nowa Is Free All Weekend! Go Build That Idea (and Win 500$ worth of AI Cr
 description: For 48 hours Nowa is free for everyone — full AI access and free deploys to Web, App Store, and Play Store. Build a complete app, submit it, and win up to 1,000 free AI credits.
 slug: nowa-free-weekend
 authors: [anas]
-date: 2026-06-20
+date: 2026-06-20T08:00:00
 tags: [announcement, ai, free-plan]
 keywords: [Nowa free weekend, build an app, free AI credits, app challenge, Flutter app builder, Nowa 3.9]
 image: https://blog.nowa.dev/img/nowa-free-weekend-1080.png
